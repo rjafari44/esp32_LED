@@ -1,11 +1,12 @@
 #include "myheader.h"
 
 void showMenu() {
-        Serial.println("***** Mode Menu System *****\n");
+        Serial.println("\n***** MODE MENU SYSTEM *****\n");
         Serial.println("Enter mode of choice:");
         Serial.println("1. Blink LED Mode");
         Serial.println("2. LED Dimmer");
         Serial.println("3. RGB Dimmer");
+        Serial.print("\nYour Choice: ");
     }
 
 void getUserInput() {

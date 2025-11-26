@@ -5,7 +5,7 @@ char input = {};
 
 void blink_setup() {
     pinMode(pinLED, OUTPUT);
-    Serial.println("*** Blink Mode ***");
+    Serial.println("\n*** Blink Mode ***");
     Serial.println("LED is blinking. Type 'm' or 'M' + Enter to return to mode menu");
 }
 
@@ -26,7 +26,7 @@ void blink_loop() {
             case 'm': 
             case 'M': {
                 currentMode = MENU;
-                modeInitialized[1] = false;
+                modeInitialized[0] = false;
                 Serial.println("Returning to mode menu...");
                 break;
             }
