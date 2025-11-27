@@ -1,15 +1,14 @@
 # esp32_Light
-## A project to mess around with LEDs on a esp32
 
-This code consists of three modes: LED Blink, Basic Dimmer, and RGB Dimmer. Each mode has a different design needed to run. I have attached the sample setups I used for my own design with tinkerCAD, but feel free to use any pin or even change the code to match your need.
+I created this code to mess around with different LED configurations on a esp32 board. This code consists of three modes: LED Blink, Basic Dimmer, and RGB Dimmer. Each mode has a different design needed to run. I have attached the sample setups I used for my own design with tinkerCAD, but feel free to use any pin or even change the code to match your need.
 
-#### Mode LED Blink:
+### Mode LED Blink:
 A simple LED blinking mode which has the light flicker on and off once every second.
 
-#### Mode Basic Dimmer
+### Mode Basic Dimmer
 This mode uses a potentiometer to control the brightness of the LED from 0% to 100%.
 
-#### Mode RGB Dimmer
+### Mode RGB Dimmer
 This mode is built upon the Basic Dimmer but uses multiple potentiometers with multiple LEDs. I used a RGB Led which has multiple colors in it, but that could be simulated by using a Red, Green and Blue LED next to each other under a lens to simulate multiple colors.
 
 ## HOW IT IS RUN
@@ -29,7 +28,7 @@ ls /dev/tty*
 arduino-cli board list
 ```
 
-#### Run the program in CLI
+##### Run the program in CLI
 ```bash
 ./run.sh
 ```
