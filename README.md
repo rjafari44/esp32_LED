@@ -12,7 +12,7 @@ This mode uses a potentiometer to control the brightness of the LED from 0% to 1
 #### Mode RGB Dimmer
 This mode is built upon the Basic Dimmer but uses multiple potentiometers with multiple LEDs. I used a RGB Led which has multiple colors in it, but that could be simulated by using a Red, Green and Blue LED next to each other under a lens to simulate multiple colors.
 
-### HOW IT IS RUN
+## HOW IT IS RUN
 I ran this code on a WeAct Studio esp32c3 board which gave me issues with the serial monitor not working. I fixed the serial monitor issue by ensuring that USB CDC is enabled.
 
 If using the Arduino IDE, ensure the correct board, the WeAct Studio esp32c3 board, is the correct selected one.
