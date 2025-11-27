@@ -1,3 +1,4 @@
+#line 1 "/home/GoonKid/GitHub/esp32_Light/esp32_Light.ino"
 #include "myheader.h"
 #include <Arduino.h>
 
@@ -47,3 +48,4 @@ void loop() {
         }
     }
 }
+

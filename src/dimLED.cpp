@@ -1,5 +1,5 @@
 #include "myheader.h"
-#include<Arduino.h>
+#include <Arduino.h>
 
 const int pinLED{10};
 const int potReadPin{4};

@@ -1,20 +1,23 @@
+#line 1 "/home/GoonKid/GitHub/esp32_Light/src/dimLED.cpp"
 #include "myheader.h"
-#include<Arduino.h>
+#include <Arduino.h>
 
-const int pinLED{4};
+const int pinLED{10};
+const int potReadPin{4};
+static int potValue{};
+static int brightness{};
 static char input{};
 
-void blink_setup() {
-    pinMode(pinLED, OUTPUT);
-    Serial.println("\n*** Blink Mode ***");
-    Serial.println("LED is blinking. Type 'm' or 'M' + Enter to return to mode menu");
+void dimLED_setup() {
+    pinMode(pinLED, OUTPUT); 
+    Serial.println("\n*** Basic Dimmer Mode ***");
+    Serial.println("LED is ready to be controlled by potentiometer. Type 'm' or 'M' + Enter to return to mode menu");
 }
 
-void blink_loop() {
-    digitalWrite(pinLED, HIGH);
-    delay(1000);
-    digitalWrite(pinLED, LOW);
-    delay(1000);
+void dimLED_loop() {
+    potValue = analogRead(potReadPin);
+    brightness = potValue / 16;
+    analogWrite(pinLED, brightness);
 
     if (Serial.available() > 0) {
         input = Serial.read();
@@ -27,7 +30,7 @@ void blink_loop() {
             case 'm': 
             case 'M': {
                 currentMode = MENU;
-                modeSetup[0] = false;
+                modeSetup[1] = false;
                 Serial.println("Returning to mode menu...");
                 break;
             }
