@@ -1,7 +1,7 @@
 #include "myheader.h"
 
-static const int pinLED {4};
-char input = {};
+const int pinLED{4};
+static char input{};
 
 void blink_setup() {
     pinMode(pinLED, OUTPUT);
@@ -26,7 +26,7 @@ void blink_loop() {
             case 'm': 
             case 'M': {
                 currentMode = MENU;
-                modeInitialized[0] = false;
+                modeSetup[0] = false;
                 Serial.println("Returning to mode menu...");
                 break;
             }

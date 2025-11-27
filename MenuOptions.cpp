@@ -10,7 +10,7 @@ void showMenu() {
     }
 
 void getUserInput() {
-    char userInput = {};
+    char userInput{};
 
     if (Serial.available() > 0) {
         userInput = Serial.read();

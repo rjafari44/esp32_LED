@@ -12,41 +12,33 @@ void loop() {
                 showMenu();
                 menuDisplayed = true;
             }
-
             getUserInput();
             break;
         }
-        
         case BLINK: {
-            if (!modeInitialized[0]) {
+            if (!modeSetup[0]) {
                 blink_setup();
-                modeInitialized[0] = true;
+                modeSetup[0] = true;
             }
-
             blink_loop();
             break;
         }
-
         case DIM_BASIC: {
-            if (!modeInitialized[1]) {
-                // dimLED_setup();
-                modeInitialized[1] = true;
+            if (!modeSetup[1]) {
+                dimLED_setup();
+                modeSetup[1] = true;
             }
-
-            // dimLED_loop();
+            dimLED_loop();
             break;
         }
-
         case DIM_RGB: {
-            if (!modeInitialized[2]) {
-                // dimRGB_setup();
-                modeInitialized[2] = true;
+            if (!modeSetup[2]) {
+                dimRGB_setup();
+                modeSetup[2] = true;
             }
-
-            // dimRGB_loop();
+            dimRGB_loop();
             break;
         }
-
         default: {
             currentMode = 0;
             menuDisplayed = false;
