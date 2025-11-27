@@ -20,7 +20,9 @@ If running the script in CLI, it will prompt you for your board's serial port it
 
 #### Find Connected Serial Port
 1. On Linux
+''''bash
 ls /dev/tty*
+''''
 
 2. Using Arduino-CLI
 arduino-cli board list
