@@ -31,7 +31,7 @@ This mode is built upon the Basic Dimmer but uses multiple potentiometers with m
 
 ---
 
-## HOW IT IS RUN
+## How to run
 I ran this code on a WeAct Studio esp32c3 board which gave me issues with the serial monitor not working. I fixed the serial monitor issue by ensuring that USB CDC is enabled.
 
 If using the Arduino IDE, make sure the WeAct Studio esp32c3 board is the correct selected one.
@@ -40,18 +40,18 @@ If running the script in CLI, it will prompt you for your board's serial port th
 
 If you prefer a manual/edited compilation and upload, either edit my shell script or simply copy them one at a time with custom flags.
 
-#### Find Connected Serial Port
-##### On Linux
+### Find Connected Serial Port
+#### On Linux
 ```bash
 ls /dev/tty*
 ```   
 
-##### With Arduino CLI (recommended method)
+#### With Arduino CLI (recommended method)
 ```bash
 arduino-cli board list
 ```
 
-##### Run the program in CLI
+### Run the program in CLI
 ```bash
 ./run.sh
 ```
